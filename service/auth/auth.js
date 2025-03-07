@@ -3,11 +3,15 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const signUp = async (userObj) => {
-    if (!userObj) {
-        throw new Error("No details supplied");
-    }
-    const newUser = await user.create(userObj);
-    return newUser;
+    // if (!userObj) {
+    //     throw new Error("No details supplied");
+    // }
+    // const newUser = await user.create(userObj);
+    // return newUser;
+    // console.log(newUser);
+    const newUser = await user.create(userObj)
+    return newUser
+    
 };
 
 const signIn = async (userObj) => {
@@ -36,3 +40,12 @@ const generateToken = async (payload) => {
 }
 
 module.exports = { signUp, signIn };
+
+
+
+
+
+
+
+
+
